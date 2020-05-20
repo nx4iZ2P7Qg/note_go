@@ -1,0 +1,9 @@
+array 只用在 SHA256 这种固定固定长度的地方
+
+其余都用 slice
+
+slice 不是纯粹的引用类型，更像是
+type IntSlice struct {
+    ptr      *int
+    len, cap int
+}

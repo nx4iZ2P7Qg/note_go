@@ -1,0 +1,14 @@
+len() 返回 byte 长度，而不是 rune 长度
+index() 也是 byte 下标
+substring() 也是
+
+因为 go 源文件经常以 utf-8 编码，并且 go text string 也总是解释为 utf-8，所以字符串常量可以使用 unicode code point
+
+raw string 比较适合用来写正则表达式，HTML 模版，JSON，命令使用说明
+
+utf8 解码或者 range 隐式解码时，无法识别的字符，以 \uFFFD 代替，是一个6边形，黑底的白色问号
+
+bytes, strings, strconv, unicode 4个包都用来处理 string
+
+包 path/filepath 处理层级文件名
+包 path 处理 / 分隔的路径，不处理文件名

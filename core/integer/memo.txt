@@ -1,0 +1,22 @@
+# binary operators 二元操作符优先级
+* / % << >> & &^
++ - | ^
+== != < <= > >=
+&&
+||
+# 前两排可以添加 = 构成简短运算
+
+# % 当负数为底数时的行为，每种语言不同，GO 中，reminder 余数的符号与 dividend 被除数相同
+
+# 位操作
+& bit wise AND
+| bit wise OR
+^ bit wise XOR                  exclusive OR (XOR)
+&^ bit clear (AND NOT)
+<< left shift
+>> right shift
+
+# unsigned 不是用来处理无符号数的，比如 len() 的返回值，是一个 signed
+# unsigned 更多用于位操作，特别算术操作，位集，二进制文件，哈希，加解密
+
+# 8进制数只用来表示 POSIX 系统中的权限

@@ -1,0 +1,7 @@
+有6种 uncommitted 常量
+    untyped boolean
+    untyped integer
+    untyped rune
+    untyped floating-point
+    untyped complex
+    untyped string
