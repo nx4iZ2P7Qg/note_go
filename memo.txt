@@ -201,3 +201,10 @@ log
     https://github.com/KeKe-Li
     https://gobyexample.com/
     https://tour.golang.org/welcome/1
+
+func
+// 类型为指针时
+type P *int
+// 不允许定义方法
+func (P) f1() { /* ... */ }
+func (*P) f2() { /* ... */ }
