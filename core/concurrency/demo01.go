@@ -5,7 +5,7 @@ import (
 	"time"
 )
 
-func main() {
+func demo0101() {
 	// 每100ms往通道中发1个信号
 	tick := time.Tick(100 * time.Millisecond)
 	// 500ms后往通道中发1个信号
