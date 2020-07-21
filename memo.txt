@@ -9,12 +9,12 @@
 # 下载 go 包 https://golang.org/dl/
 # 解压到 /usr/local
 # 添加环境变量 
-sudo vim ~./.profile
+sudo vi ~/.bash_profile
 # export GOROOT=/usr/local/go
 # export GOPATH=$HOME/gopath
 # export PATH=$PATH:$GOROOT/bin:$GOPATH/bin
 # 刷新
-source ~/.profile
+source ~/.bash_profile
 # 在 GOPATH 中建立3个文件夹 bin pkg src
 
 # 在 goland 中的配置
