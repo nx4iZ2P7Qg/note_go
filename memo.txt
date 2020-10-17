@@ -17,6 +17,15 @@ sudo vi ~/.bash_profile
 source ~/.bash_profile
 # 在 GOPATH 中建立3个文件夹 bin pkg src
 
+
+# 在 vsc 中的配置
+# 安装插件 go
+# 配置代理
+go env -w GO111MODULE=on
+go env -w GOPROXY=https://goproxy.io,direct
+# vsc 右下角 Analysis Tools Missing，安装
+
+
 # 在 goland 中的配置
 # GOPATH 为旧式项目管理，弃用，使用 go mod
 # import 导入的内容有
