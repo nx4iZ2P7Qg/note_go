@@ -18,8 +18,6 @@
     2.
         接口用于描述类型的行为，鸭子类型
         最常用的接口之一是io.Reader，声明有数据可以读取
-1.2
-    playground分享代码http://play.golang.org
 1.3
     go使用接口作为代码复用的基础模块
 

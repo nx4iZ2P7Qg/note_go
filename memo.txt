@@ -1,3 +1,6 @@
+playground
+    http://play.golang.org
+
 # go window 安装
 # https://golang.org/dl/
 # 安装msi文件后，会配置几个变量
@@ -55,9 +58,14 @@ go env -w GOPROXY=https://goproxy.io,direct
 # go get 的代理
     export GOPROXY=https://goproxy.io
 
+
 # 在 visual studio code 中配置 go
-# vsc中打开go文件安装go插件
-# f5运行继续安装插件
+# 安装go插件
+# 配置代理
+go env -w GO111MODULE=on
+go env -w GOPROXY=https://goproxy.io,direct
+# vsc 右下角 Analysis Tools Missing
+
 
 # Standard Go Project Layout
     https://github.com/golang-standards/project-layout
@@ -235,10 +243,16 @@ interface
 // 接口只在多个 struct 需要统一行为时定义
 // 例外情况，struct 因为依赖无法与 interface 在同一个包内时
 
+// 接口值可以使用 == 和 != 来进行比较。两个接口值相等仅当它们都是 nil 值或者它们的动态类型相同并且动态值也根据这个动态类型的 == 操作相等
+// 因为接口值是可比较的，所以它们可以用在 map 的键或者作为 switch 语句的操作数
+// 然而，如果两个接口值的动态类型相同，但是这个动态类型是不可比较的（比如切片），将它们进行比较就会失败并且 panic
+
 chan
 // channel 用作函数参数时，通常要么只接收，要么只发送
 // 有 goroutine 在等待 channel，且 channel 没有其他 goroutine 接收，这种情况称为 goroutine leak，是 bug
 // 此时 GC 无法回收 goroutine
+
+通道并不提供跨 goroutine 的数据访问保护机制。如果通过通道传输数据的一份副本，那么每个 goroutine 都持有一份副本，各自对自己的副本做修改是安全的。当传输的是指向数据的指针时，如果读和写是由不同的 goroutine 完成的，每个 goroutine 依旧需要额外的同步动作。
 
 // 导入包方法通常希望是线程安全的
 
