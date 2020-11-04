@@ -21,7 +21,7 @@ func WithRequestInfo2(handler http.Handler) http.Handler {
 
 // 怪异的 handler 链
 // 看作入栈操作，输出2 1 3
-func demo0101() {
+func demo01() {
 	server := &http.Server{
 		Addr: ":9999",
 		Handler: http.HandlerFunc(func(w http.ResponseWriter, req *http.Request) {

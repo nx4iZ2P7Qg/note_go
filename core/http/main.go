@@ -1,5 +1,5 @@
 package main
 
 func main() {
-	demo0101()
+	demo01()
 }
