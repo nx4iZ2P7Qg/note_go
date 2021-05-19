@@ -21,12 +21,9 @@ source ~/.bash_profile
 # 在 GOPATH 中建立3个文件夹 bin pkg src
 
 
-# 在 vsc 中的配置
-# 安装插件 go
-# 配置代理
-go env -w GO111MODULE=on
-go env -w GOPROXY=https://goproxy.io,direct
-# vsc 右下角 Analysis Tools Missing，安装
+# 在 visual studio code 中配置 go
+# 安装go插件
+# vsc 右下角 Analysis Tools Missing
 
 
 # 在 goland 中的配置
@@ -39,6 +36,18 @@ go env -w GOPROXY=https://goproxy.io,direct
 #   若2个文件在不同项目，直接写 replace
 # 公有包，私有包必须存在 go.mod
 # 手动运行各 main 方法时，生成的 run configuration 可能 Run_kind = File，需要修改为 package 更符合逻辑
+
+
+# 代理
+    go env -w GO111MODULE=on
+    go env -w GOPROXY=https://goproxy.cn,direct
+
+    go env -w GO111MODULE=on
+    go env -w GOPROXY=https://mirrors.aliyun.com/goproxy/,direct
+
+    go env -w GO111MODULE=on
+    go env -w GOPROXY=https://goproxy.io,direct
+
 
 # 查看go环境
     go env
@@ -54,17 +63,6 @@ go env -w GOPROXY=https://goproxy.io,direct
     go get -u=patch
 # 清理未使用/生效的依赖
     go mod tidy
-
-# go get 的代理
-    export GOPROXY=https://goproxy.io
-
-
-# 在 visual studio code 中配置 go
-# 安装go插件
-# 配置代理
-go env -w GO111MODULE=on
-go env -w GOPROXY=https://goproxy.io,direct
-# vsc 右下角 Analysis Tools Missing
 
 
 # Standard Go Project Layout
